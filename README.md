@@ -38,9 +38,9 @@ This solution is designed with a dual perspective:
 
 ---
 
-## 🏗️ Architecture Scheme
+## Architecture Scheme
 
-Here is the high-level architecture of the HR Guardian AI solution:
+Here is the high-level architecture of the AI solution:
 
 ```mermaid
 graph TD
