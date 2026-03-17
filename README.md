@@ -2,7 +2,7 @@
 # G5HackatonAI
 Repository for the Explainability/AI hackathon
 
-# HR Guardian AI: Explainable & Ethical Turnover Prediction
+# Anticipa AI: Explainable & Ethical Turnover Prediction
 
 ## Project Overview
 **Our AI** is an intelligent, transparent, and fair predictive solution designed to help Human Resources departments better understand the causes of employee turnover and preserve talent. 
