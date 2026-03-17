@@ -46,3 +46,30 @@ Follow these steps to test the HR Guardian AI dashboard on your local machine:
 ```bash
 git clone <your-repo-link>
 cd <repository-folder-name>
+
+
+## ARCHITECHTURE
+
+Here is the high-level architecture of the HR Guardian AI solution:
+
+```mermaid
+graph TD
+    A[(Raw HR Dataset)] -->|GDPR Anonymization| B(Data Preprocessing)
+    
+    B -->|Review Notes| C[VaderSentiment NLP]
+    B -->|Tabular Data| D[Feature Engineering]
+    
+    C --> E((XGBoost Classifier))
+    D --> E
+    
+    E -->|Risk Probabilities| F[Streamlit Dashboard]
+    E -->|Model Weights| G[SHAP Explainer]
+    
+    G -->|Waterfall Plots| F
+    
+    F -->|Actionable Recommendations| H{HR Manager}
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:4px
+    style F fill:#bfb,stroke:#333,stroke-width:2px
+    style H fill:#fdb,stroke:#333,stroke-width:2px
