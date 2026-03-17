@@ -22,7 +22,7 @@ This project was developed for the Capgemini x ESILV Trusted AI Hackathon. It sp
 * **Security & Compliance:** GDPR compliance is maintained through strict data anonymization (removal/masking of sensitive identifiers).
 * **Deliverables:** A complete machine learning pipeline, a demonstration dashboard (Streamlit), a Data Card, a Model Card, and a comprehensive Responsible AI framework.
 
-##Personas
+## Personas
 This solution is designed with a dual perspective:
 * **The Client (HR Manager / CHRO):** *"I need a reliable and understandable solution to retain my employees and reduce turnover costs."* * **The Provider (HR-AI Company):** *"We bring cutting-edge, responsible, and ethical AI solutions to empower HR departments."* ---
 
@@ -37,16 +37,6 @@ This solution is designed with a dual perspective:
 * **Frontend/Dashboard:** Streamlit, Pandas, Matplotlib
 
 ---
-
-## Instructions: How to Run the Dashboard Locally
-
-Follow these steps to test the HR Guardian AI dashboard on your local machine:
-
-**1. Clone the repository and navigate to the folder:**
-```bash
-git clone <your-repo-link>
-cd <repository-folder-name>
-
 
 ## 🏗️ Architecture Scheme
 
