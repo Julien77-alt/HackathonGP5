@@ -48,7 +48,7 @@ git clone <your-repo-link>
 cd <repository-folder-name>
 
 
-## ARCHITECHTURE
+## 🏗️ Architecture Scheme
 
 Here is the high-level architecture of the HR Guardian AI solution:
 
