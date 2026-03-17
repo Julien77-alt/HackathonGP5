@@ -2,7 +2,7 @@
 # G5HackatonAI
 Repository for the Explainability/AI hackathon
 
-# HR Guardian AI: Explainable & Ethical Turnover Prediction
+# Anticipa AI: Explainable & Ethical Turnover Prediction
 
 ## Project Overview
 **Our AI** is an intelligent, transparent, and fair predictive solution designed to help Human Resources departments better understand the causes of employee turnover and preserve talent. 
@@ -22,7 +22,7 @@ This project was developed for the Capgemini x ESILV Trusted AI Hackathon. It sp
 * **Security & Compliance:** GDPR compliance is maintained through strict data anonymization (removal/masking of sensitive identifiers).
 * **Deliverables:** A complete machine learning pipeline, a demonstration dashboard (Streamlit), a Data Card, a Model Card, and a comprehensive Responsible AI framework.
 
-##Personas
+## Personas
 This solution is designed with a dual perspective:
 * **The Client (HR Manager / CHRO):** *"I need a reliable and understandable solution to retain my employees and reduce turnover costs."* * **The Provider (HR-AI Company):** *"We bring cutting-edge, responsible, and ethical AI solutions to empower HR departments."* ---
 
@@ -38,11 +38,28 @@ This solution is designed with a dual perspective:
 
 ---
 
-## Instructions: How to Run the Dashboard Locally
+## Architecture Scheme
 
-Follow these steps to test the HR Guardian AI dashboard on your local machine:
+Here is the high-level architecture of the AI solution:
 
-**1. Clone the repository and navigate to the folder:**
-```bash
-git clone <your-repo-link>
-cd <repository-folder-name>
+```mermaid
+graph TD
+    A[(Raw HR Dataset)] -->|GDPR Anonymization| B(Data Preprocessing)
+    
+    B -->|Review Notes| C[VaderSentiment NLP]
+    B -->|Tabular Data| D[Feature Engineering]
+    
+    C --> E((XGBoost Classifier))
+    D --> E
+    
+    E -->|Risk Probabilities| F[Streamlit Dashboard]
+    E -->|Model Weights| G[SHAP Explainer]
+    
+    G -->|Waterfall Plots| F
+    
+    F -->|Actionable Recommendations| H{HR Manager}
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:4px
+    style F fill:#bfb,stroke:#333,stroke-width:2px
+    style H fill:#fdb,stroke:#333,stroke-width:2px
